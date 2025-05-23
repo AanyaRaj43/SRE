@@ -1,0 +1,9 @@
+metrics-app/
+├── charts/
+├── templates/
+│   ├── deployment.yaml
+│   ├── service.yaml
+│   ├── secret.yaml
+│   └── _helpers.tpl
+├── Chart.yaml
+├── values.yaml
