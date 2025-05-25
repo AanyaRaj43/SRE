@@ -1,0 +1,23 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: metrics-app
+  namespace: argocd # ArgoCD's own namespace
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/AanyaRaj43/SRE-Assignment
+    targetRevision: HEAD
+    path: metrics-app
+    helm:
+      valueFiles:
+        - values.yaml
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: metrics-app-ns
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
