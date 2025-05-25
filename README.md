@@ -8,27 +8,6 @@ Deploy a containerized app that exposes a `/counter` endpoint using Helm, ArgoCD
 The repository is organized as follows:
 
 ```
-sre-metrics-app/
-├── helm-charts/                # Contains the Helm chart for metrics-app
-│   └── metrics-app/
-│       ├── Chart.yaml          # Helm chart definition
-│       ├── values.yaml         # Default configuration values
-│       ├── templates/          # Kubernetes manifest templates
-│       │   ├── _helpers.tpl    # Helm helper templates
-│       │   ├── deployment.yaml # Deployment manifest
-│       │   ├── service.yaml    # Service manifest
-│       │   ├── secret.yaml     # Secret manifest for PASSWORD
-│       │   └── ingress.yaml    # Ingress manifest
-│       └── .helmignore         # Files to ignore for Helm packaging
-├── argocd/                     # ArgoCD configuration
-│   └── application.yaml      # ArgoCD Application manifest for metrics-app
-├── scripts/                    # Shell scripts for bootstrapping the environment
-│   ├── 00-kind-config.yaml   # KIND cluster configuration (for ingress port mapping)
-│   ├── 01-create-kind-cluster.sh # Script to create the KIND cluster
-│   ├── 02-install-ingress-nginx.sh # Script to install NGINX Ingress
-│   └── 03-install-argocd.sh  # Script to install ArgoCD
-└── README.md                   # This documentation file
-
 .
 ├── argocd
 │   └── metrics-app-application.yml             # ArgoCD Application manifest for metrics-app
