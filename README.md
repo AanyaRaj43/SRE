@@ -1,2 +1,0 @@
-# SRE-Assignment
-SRE Assignment

@@ -1,5 +1,0 @@
-apiVersion: v2
-name: metrics-app
-description: A Helm chart for dploying the Metrics App
-type: application
-appVersion: "1.4"
